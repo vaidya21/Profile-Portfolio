@@ -252,6 +252,17 @@ nav a:hover {
   margin-right: 5px;
 }
 
+.sidebar:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 0 30px rgba(255, 193, 7, 0.25);
+    border-color: #ffc107;
+}
+.main-content:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 0 30px rgba(255, 193, 7, 0.25);
+    border-color: #ffc107;
+}
+
 /* Responsive  */
 @media screen and (max-width:800px) {
  .main-container{
