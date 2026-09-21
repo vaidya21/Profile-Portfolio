@@ -3,194 +3,566 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>My Portfolio</title>
+    <meta name="description" content="Portfolio of Vaidyanath Soni - Aspiring Machine Learning Engineer, ECE Undergraduate at MMMUT. Specializing in Python, Scikit-Learn, NLP, and Predictive Modeling." />
+    <meta name="author" content="Vaidyanath Soni" />
+    <meta name="theme-color" content="#1e1e1e" />
+    <title>Vaidyanath Soni | Aspiring ML Engineer Portfolio</title>
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <div class="main-container">
-      <!-- sidebar -->
-      <div class="sidebar">
-        <!-- profile -->
+      <!-- SIDEBAR -->
+      <aside class="sidebar" id="sidebar">
+        <!-- Mobile Sidebar Toggle -->
+        <button class="mobile-sidebar-toggle" id="sidebarToggle" aria-label="Toggle contact details">
+          <span>Contact &amp; Info</span>
+          <svg class="toggle-icon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
+            <polyline points="6 9 12 15 18 9"></polyline>
+          </svg>
+        </button>
 
+        <!-- Profile Section -->
         <div class="profile">
-          <img src="ProfilePic.jpeg" alt="Profile" />
+          <div class="profile-img-wrap">
+            <img src="images/ProfilePic.jpeg" alt="Vaidyanath Soni" onerror="this.src='images/ProfilePic.jpeg'" />
+          </div>
           <h2>Vaidyanath Soni</h2>
-          <p>Aspiring ML Engineer</p>
-        </div>
+          <p class="badge">Aspiring ML Engineer</p>
 
-        <!-- contact -->
-
-        <div class="contact">
-          <div class="email">
-            <h3 class="label">Email</h3>
-            <a class="value" href="mailto:vaidya1182@gmail.com">vaidya1182@gmail.com</a>
-          </div>
-          <div class="phone">
-            <h3 class="label">Phone</h3>
-            <a class="value" href="tel:7307808514">7307808514</a>
-          </div>
-          <div class="location">
-            <h3 class="label">Location</h3>
-            <p class="value">Basti, Uttar Pradesh</p>
+          <!-- Resume / CV Download Action -->
+          <div class="resume-wrap">
+            <a href="Vaidyanath_Soni_Resume.pdf" download="Vaidyanath_Soni_Resume.pdf" class="btn-resume" id="resumeBtn" title="Request or Download Resume">
+              <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                <polyline points="7 10 12 15 17 10"></polyline>
+                <line x1="12" y1="15" x2="12" y2="3"></line>
+              </svg>
+              <span>Download Resume</span>
+            </a>
           </div>
         </div>
 
-        <!-- social -->
+        <!-- Collapsible Content on Small Mobile Screens -->
+        <div class="sidebar-details" id="sidebarDetails">
+          <!-- Contact Info -->
+          <div class="contact">
+            <div class="contact-item email">
+              <div class="contact-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                  <polyline points="22,6 12,13 2,6"></polyline>
+                </svg>
+              </div>
+              <div class="contact-info">
+                <h3 class="label">Email</h3>
+                <a class="value" href="mailto:vaidya1182@gmail.com">vaidya1182@gmail.com</a>
+              </div>
+              <button class="btn-copy" data-copy="vaidya1182@gmail.com" title="Copy Email" aria-label="Copy Email">
+                <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2">
+                  <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                  <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                </svg>
+              </button>
+            </div>
 
-        <div class="social">
-          <a href="https://github.com/vaidya21" target="_blank"
-            ><img src="https://simpleicons.org/icons/github.svg" alt=""
-          /></a>
-          <a href="linkedin.com/in/vaidyanath-soni-5a4987271" target="_blank"
-            ><img src="https://simpleicons.org/icons/logmein.svg" alt=""
-          /></a>
+            <div class="contact-item phone">
+              <div class="contact-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                </svg>
+              </div>
+              <div class="contact-info">
+                <h3 class="label">Phone</h3>
+                <a class="value" href="tel:+917307808514">+91 7307808514</a>
+              </div>
+              <button class="btn-copy" data-copy="+917307808514" title="Copy Phone Number" aria-label="Copy Phone Number">
+                <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2">
+                  <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                  <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                </svg>
+              </button>
+            </div>
+
+            <div class="contact-item location">
+              <div class="contact-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                  <circle cx="12" cy="10" r="3"></circle>
+                </svg>
+              </div>
+              <div class="contact-info">
+                <h3 class="label">Location</h3>
+                <p class="value">Basti, Uttar Pradesh, India</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Social Links -->
+          <div class="social">
+            <a href="https://github.com/vaidya21" target="_blank" rel="noopener noreferrer" title="GitHub Profile: @vaidya21" aria-label="GitHub Profile">
+              <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor">
+                <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
+              </svg>
+            </a>
+            <a href="https://linkedin.com/in/vaidyanath-soni-5a4987271" target="_blank" rel="noopener noreferrer" title="LinkedIn Profile" aria-label="LinkedIn Profile">
+              <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor">
+                <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+              </svg>
+            </a>
+            <a href="mailto:vaidya1182@gmail.com" title="Email Vaidyanath directly" aria-label="Direct Email">
+              <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                <polyline points="22,6 12,13 2,6"></polyline>
+              </svg>
+            </a>
+          </div>
         </div>
-      </div>
+      </aside>
 
-      <!-- main-content -->
-
-      <div class="main-content">
-        <!-- navigation -->
-        <div id="navigation">
-          <nav>
-            <a href="#about" class="active">About</a>
-            <a href="#skills">Skills</a>
-            <a href="#education">Education</a>
-            <a href="#portfolio">Portfolio</a>
+      <!-- MAIN CONTENT -->
+      <main class="main-content">
+        <!-- Navigation -->
+        <header id="navigation">
+          <nav aria-label="Main Navigation">
+            <a href="#about" class="nav-link active">About</a>
+            <a href="#skills" class="nav-link">Skills</a>
+            <a href="#education" class="nav-link">Education</a>
+            <a href="#portfolio" class="nav-link">Portfolio</a>
+            <a href="#contact" class="nav-link">Contact</a>
           </nav>
-        </div>
-        <!-- about me -->
-        <div id="about">
+        </header>
+
+        <!-- ABOUT SECTION -->
+        <section id="about" class="content-section">
           <h2 class="heading">About Me</h2>
           <div class="line"></div>
           <p class="content">
-            I am a final-year Electronics and Communication Engineering student
-            at MMMUT with a strong mathematical foundation, deeply passionate
-            about extracting actionable insights from raw data. Currently, I
-            have built a solid foundation in Data Manipulation and
-            Visualization. I am proficient in Python and its core analytical
-            libraries (NumPy, Pandas, Matplotlib, Seaborn, Scikit-Learn). I
-            enjoy cleaning messy datasets, wrangling data efficiently, and
-            turning complex numbers into clear, visual stories. I am
-            continuously upskilling and expanding my technical toolkit to build
-            end-to-end analytical pipelines. I am always open to connecting with
-            fellow data enthusiasts, mentors and industry professionals to learn
-            and grow.
+            I am a final-year Electronics and Communication Engineering student at Madan Mohan Malaviya University of Technology (MMMUT) with a strong mathematical foundation, deeply passionate about extracting actionable insights and predictive intelligence from raw data.
           </p>
-        </div>
-        <!-- Skills -->
-        <div id="skills">
+          <p class="content" style="margin-top: 15px;">
+            Currently, I have built a solid foundation in Data Manipulation, Feature Engineering, and Machine Learning. I am proficient in Python and its core analytical libraries (NumPy, Pandas, Matplotlib, Seaborn, Scikit-Learn). I enjoy cleaning messy datasets, wrangling data efficiently, and turning complex numbers into clear, visual stories and production-ready applications. I am continuously upskilling and expanding my technical toolkit to build end-to-end analytical pipelines. I am always open to connecting with fellow data enthusiasts, mentors, and industry professionals to learn and grow.
+          </p>
+
+          <!-- Quick Highlight Stat Cards -->
+          <div class="stats-container">
+            <div class="stat-card">
+              <div class="stat-number">4+</div>
+              <div class="stat-text">End-to-End ML Projects</div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-number">97.1%</div>
+              <div class="stat-text">Peak Classification Accuracy</div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-number">2027</div>
+              <div class="stat-text">B.Tech ECE, MMMUT</div>
+            </div>
+          </div>
+        </section>
+
+        <!-- SKILLS SECTION -->
+        <section id="skills" class="content-section">
           <h2 class="heading">Skills</h2>
           <div class="line"></div>
           <div class="grid-container">
-            <div class="item">
-              <img src="https://simpleicons.org/icons/html5.svg" alt="" />
-              <h3>HTML5</h3>
-            </div>
-            <div class="item">
-              <img src="https://simpleicons.org/icons/css.svg" alt="" />
-              <h3>CSS3</h3>
-            </div>
-            <div class="item">
-              <img src="https://simpleicons.org/icons/javascript.svg" alt="" />
-              <h3>JavaScript</h3>
-            </div>
-            <div class="item">
-              <img src="https://simpleicons.org/icons/react.svg" alt="" />
-              <h3>React</h3>
-            </div>
-            <div class="item">
-              <img src="https://simpleicons.org/icons/cplusplus.svg" alt="" />
-              <h3>C++</h3>
-            </div>
-            <div class="item">
-              <img src="https://simpleicons.org/icons/python.svg" alt="" />
+            <div class="item" title="Python">
+              <img src="https://cdn.simpleicons.org/python/ffbf00" alt="Python" class="skill-svg" />
+              <svg viewBox="0 0 24 24"
+              <rect x="3" y="3" width="18" height="10" rx="2" ry="2"></rect>
+                <line x1="3" y1="9" x2="21" y2="9"></line>
+                <line x1="9" y1="21" x2="9" y2="9"></line>
+              </svg>
               <h3>Python</h3>
+              <span class="skill-sub">NumPy &bull; Pandas &bull; Matplotlib &bull; Seaborn &bull; Scikit-Learn</span>
             </div>
-            <div class="item">
-              <img src="https://simpleicons.org/icons/mysql.svg" alt="" />
+
+            <div class="item" title="C++">
+              <img src="https://cdn.simpleicons.org/cplusplus/ffbf00" alt="C++" class="skill-svg" />
+              <svg viewBox="0 0 24 24"
+              <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+                <line x1="3" y1="9" x2="21" y2="9"></line>
+                <line x1="9" y1="21" x2="9" y2="9"></line>
+              </svg>
+              <h3>C++</h3>
+              <span class="skill-sub">Data Structures and Algorithms</span>
+            </div>
+
+            <div class="item" title="MySQL">
+                <img src="https://cdn.simpleicons.org/mysql/ffbf00" alt="MySQL" class="skill-svg" />
+                <svg viewBox="0 0 24 24"
+              <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+                <line x1="3" y1="9" x2="21" y2="9"></line>
+                <line x1="9" y1="21" x2="9" y2="9"></line>
+              </svg>
               <h3>MySQL</h3>
+              <span class="skill-sub">Relational DB &bull; Queries</span>
             </div>
-            <div class="item">
-              <img src="https://simpleicons.org/icons/git.svg" alt="" />
-              <h3>Git & GitHub</h3>
+
+            <div class="item" title="HTML5 & CSS3">
+              <svg viewBox="0 0 24 24" class="skill-svg" fill="none" stroke="#ffbf00" stroke-width="2">
+                <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+                <line x1="3" y1="9" x2="21" y2="9"></line>
+                <line x1="9" y1="21" x2="9" y2="9"></line>
+              </svg>
+              <h3>HTML5 &amp; CSS3</h3>
+              <span class="skill-sub">Responsive Web Design</span>
+            </div>
+            
+            <div class="item" title="JavaScript">
+               <img src="https://cdn.simpleicons.org/javascript/ffbf00" alt="JavaScript" class="skill-svg" />
+               <svg viewBox="0 0 24 24"
+              <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+                <line x1="3" y1="9" x2="21" y2="9"></line>
+                <line x1="9" y1="21" x2="9" y2="9"></line>
+              </svg>
+              <h3>JavaScript</h3>
+              <span class="skill-sub">ES6+ &bull; DOM Logic</span>
+            </div>
+
+            <div class="item" title="Git & GitHub">
+              <img src="https://cdn.simpleicons.org/git/ffbf00" alt="Git & GitHub" class="skill-svg" />
+              <svg viewBox="0 0 24 24"
+              <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+                <line x1="3" y1="9" x2="21" y2="9"></line>
+                <line x1="9" y1="21" x2="9" y2="9"></line>
+              </svg>
+              <h3>Git &amp; GitHub</h3>
+              <span class="skill-sub">Version Control &bull; Repos</span>
             </div>
           </div>
-        </div>
-        <!-- Education -->
-        <div id="education">
+        </section>
+
+        <!-- EDUCATION SECTION -->
+        <section id="education" class="content-section">
           <h2 class="heading">Education</h2>
           <div class="line"></div>
           <div class="edtech">
             <div class="edfirst">
-              <div class="year">2023-2027</div>
-              <h3 class="degree">Bachelor of Technology</h3>
+              <div class="year">2023 &mdash; 2027</div>
+              <h3 class="degree">Bachelor of Technology &bull; Electronics and Communication Engineering</h3>
               <p class="college">
                 Madan Mohan Malaviya University of Technology, Gorakhpur
               </p>
+              <p class="academic-result"><strong>CGPA:</strong> 7.69</p>
               <p class="work">
-                Driven by a deep interest in artificial intelligence, I am
-                presently focused on Machine Learning, with plans to expand my
-                expertise into Deep Learning and Generative AI. I am always
-                looking for opportunities to leverage my programming skills to
-                solve complex challenges.
+                Driven by a deep interest in artificial intelligence, I am presently focused on Machine Learning, with plans to expand my expertise into Deep Learning and Generative AI. I am always looking for opportunities to leverage my programming skills to solve complex challenges.
               </p>
-              <div class="goal"></div>
+              <div class="goal" aria-hidden="true"></div>
             </div>
+
             <div class="edsecond">
-              <div class="year">2021-2023</div>
-              <h3 class="degree">Intermediate</h3>
+              <div class="year">2023</div>
+              <h3 class="degree">Intermediate &bull; Science (PCM)</h3>
               <p class="college">The City Montessori School, Basti</p>
+              <p class="academic-result"><strong>Percentage:</strong> 85.20%</p>
               <p class="work">
-                I completed my Intermediate (12th grade) with a focus on
-                Physics, Chemistry, and Mathematics. This science and math-heavy
-                curriculum built my core analytical skills and laid the
-                groundwork for my transition into engineering, algorithms and
-                logical problem-solving.
+                I completed my Intermediate (12th grade) with a focus on Physics, Chemistry, and Mathematics. This science and math-heavy curriculum built my core analytical skills and laid the groundwork for my transition into engineering, algorithms and logical problem-solving.
               </p>
-              <div class="goal"></div>
+              <div class="goal" aria-hidden="true"></div>
             </div>
-            <div class="liner"></div>
+
+            <div class="edsecond">
+              <div class="year">2021</div>
+              <h3 class="degree">High School</h3>
+              <p class="college">New Central Academy, Gonda</p>
+              <p class="academic-result"><strong>Percentage:</strong> 81.17%</p>
+              <p class="work">
+                I completed my High School (10th grade) curriculum with a dedicated focus on fundamental mathematics and science. This early academic grounding developed my quantitative skills and ignited the curiosity that ultimately drove me toward technology and engineering.
+              </p>
+              <div class="goal" aria-hidden="true"></div>
+            </div>
+            <div class="liner" aria-hidden="true"></div>
           </div>
-        </div>
-        <!-- portfolio -->
-        <div id="portfolio">
+        </section>
+
+        <!-- PORTFOLIO SECTION -->
+        <section id="portfolio" class="content-section">
           <h2 class="heading">Portfolio</h2>
           <div class="line"></div>
+
+          <!-- Project Category Filter -->
+          <div class="filter-bar">
+            <button class="filter-btn active" data-filter="all">All Projects</button>
+          </div>
+
           <div class="project-container">
-            <div class="project">
-              <img
-                src="esc.png"
-                alt=""
-              />
-              <div class="card">
-                <h3>Email & SMS Spam Classifier</h3>
-                <p>
-                 An end-to-end Machine Learning web application that predicts whether a given email or SMS message is "Spam" or "Not Spam".
-                </p>
-                <span>Python</span>
-                <span>Scikit-Learn</span>
-                <span>Streamlit</span>
+            <!-- Project 1: Email & SMS Spam Classifier -->
+            <article class="project" data-category="ml nlp" id="project-spam">
+              <div class="project-media">
+                <img src="images/esc.png" alt="Email & SMS Spam Classifier Dashboard" onerror="this.src='images/esc.png'" />
+                <div class="media-overlay">
+                  <button class="btn-overlay-view" data-project="spam">
+                    <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2">
+                      <circle cx="11" cy="11" r="8"></circle>
+                      <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                      <line x1="11" y1="8" x2="11" y2="14"></line>
+                      <line x1="8" y1="11" x2="14" y2="11"></line>
+                    </svg>
+                    <span>View Project</span>
+                  </button>
+                </div>
               </div>
-            </div>
-            <div class="project">
-              <img
-                src="pmm.png"
-                alt=""
-              />
               <div class="card">
+                <div class="card-badge-row">
+                  <span class="badge-mini">97.1% Accuracy</span>
+                  <span class="badge-mini">100% Precision</span>
+                </div>
+                <h3>Email &amp; SMS Spam Classifier</h3>
+                <p>
+                  An end-to-end Machine Learning web application that predicts whether a given email or SMS message is "Spam" or "Not Spam" using NLP and classification algorithms.
+                </p>
+                <div class="card-tags">
+                  <span>Python</span>
+                  <span>Scikit-Learn</span>
+                  <span>Streamlit</span>
+                  <span>NLP</span>
+                </div>
+                <div class="card-actions">
+                  <button class="btn-project btn-modal-trigger" data-project="spam">
+                    <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2">
+                      <circle cx="12" cy="12" r="10"></circle>
+                      <line x1="12" y1="16" x2="12" y2="12"></line>
+                      <line x1="12" y1="8" x2="12.01" y2="8"></line>
+                    </svg>
+                    <span>Details</span>
+                  </button>
+                  <a href="https://github.com/vaidya21/Email_Spam_Classifier" target="_blank" rel="noopener noreferrer" class="btn-project btn-github">
+                    <svg viewBox="0 0 24 24" width="14" height="14" fill="currentColor">
+                      <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
+                    </svg>
+                    <span>GitHub</span>
+                  </a>
+                </div>
+              </div>
+            </article>
+
+            <!-- Project 2: Industrial Predictive Maintenance Engine -->
+            <article class="project" data-category="ml" id="project-maintenance">
+              <div class="project-media">
+                <img src="images/pmm.png" alt="Industrial Predictive Maintenance Dashboard" onerror="this.src='images/pmm.png'" />
+                <div class="media-overlay">
+                  <button class="btn-overlay-view" data-project="maintenance">
+                    <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2">
+                      <circle cx="11" cy="11" r="8"></circle>
+                      <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                      <line x1="11" y1="8" x2="11" y2="14"></line>
+                      <line x1="8" y1="11" x2="14" y2="11"></line>
+                    </svg>
+                    <span>View Project</span>
+                  </button>
+                </div>
+              </div>
+              <div class="card">
+                <div class="card-badge-row">
+                  <span class="badge-mini">Telemetry Forecasting</span>
+                  <span class="badge-mini">Real-Time Risk</span>
+                </div>
                 <h3>Industrial Predictive Maintenance Engine</h3>
                 <p>
-                  An end-to-end Machine Learning web application designed to forecast industrial equipment failures using operational sensor telemetry. Built to bridge raw industrial data with real-time predictive decision-making.
+                  An end-to-end Machine Learning web application designed to forecast industrial equipment failures using operational sensor telemetry (temperature, torque, tool wear).
                 </p>
-                <span>Python</span>
-                <span>Scikit-Learn</span>
-                <span>Streamlit</span>
+                <div class="card-tags">
+                  <span>Python</span>
+                  <span>Scikit-Learn</span>
+                  <span>Streamlit</span>
+                </div>
+                <div class="card-actions">
+                  <button class="btn-project btn-modal-trigger" data-project="maintenance">
+                    <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2">
+                      <circle cx="12" cy="12" r="10"></circle>
+                      <line x1="12" y1="16" x2="12" y2="12"></line>
+                      <line x1="12" y1="8" x2="12.01" y2="8"></line>
+                    </svg>
+                    <span>Details</span>
+                  </button>
+                  <a href="https://github.com/vaidya21/Predictive-Maintenance-Model" target="_blank" rel="noopener noreferrer" class="btn-project btn-github">
+                    <svg viewBox="0 0 24 24" width="14" height="14" fill="currentColor">
+                      <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
+                    </svg>
+                    <span>GitHub</span>
+                  </a>
+                </div>
               </div>
-            </div>
+            </article>
+
+            <!-- Project 3: Used Car Price Predictor -->
+            <article class="project" data-category="ml regression" id="project-car-price">
+              <div class="project-media">
+                <img src="images/car.png" alt="Used Car Price Predictor Dashboard" onerror="this.src='images/car.png'" />
+                <div class="media-overlay">
+                  <button class="btn-overlay-view" data-project="car">
+                    <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2">
+                      <circle cx="11" cy="11" r="8"></circle>
+                      <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                      <line x1="11" y1="8" x2="11" y2="14"></line>
+                      <line x1="8" y1="11" x2="14" y2="11"></line>
+                    </svg>
+                    <span>View Project</span>
+                  </button>
+                </div>
+              </div>
+              <div class="card">
+                <div class="card-badge-row">
+                  <span class="badge-mini">Linear Regression</span>
+                  <span class="badge-mini">Real-Time Valuation</span>
+                </div>
+                <h3>Car Price Predictor</h3>
+                <p>
+                  An end-to-end Machine Learning web application that predicts the fair market selling price of pre-owned cars using multi-feature regression and Flask.
+                </p>
+                <div class="card-tags">
+                  <span>Python</span>
+                  <span>Scikit-Learn</span>
+                  <span>Flask</span>
+                </div>
+                <div class="card-actions">
+                  <button class="btn-project btn-modal-trigger" data-project="car">
+                    <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2">
+                      <circle cx="12" cy="12" r="10"></circle>
+                      <line x1="12" y1="16" x2="12" y2="12"></line>
+                      <line x1="12" y1="8" x2="12.01" y2="8"></line>
+                    </svg>
+                    <span>Details</span>
+                  </button>
+                  <a href="https://github.com/vaidya21/Car-Price-Predictor" target="_blank" rel="noopener noreferrer" class="btn-project btn-github">
+                    <svg viewBox="0 0 24 24" width="14" height="14" fill="currentColor">
+                      <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
+                    </svg>
+                    <span>GitHub</span>
+                  </a>
+                </div>
+              </div>
+            </article>
+
+            <!-- Project 4:Real Estate Price Predictor -->
+            <article class="project" data-category="ml regression" id="project-house-price">
+              <div class="project-media">
+                <img src="images/house.png" alt="Real Estate Price Predictor Dashboard" onerror="this.src='images/house.png'" />
+                <div class="media-overlay">
+                  <button class="btn-overlay-view" data-project="house">
+                    <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2">
+                      <circle cx="11" cy="11" r="8"></circle>
+                      <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                      <line x1="11" y1="8" x2="11" y2="14"></line>
+                      <line x1="8" y1="11" x2="14" y2="11"></line>
+                    </svg>
+                    <span>View Project</span>
+                  </button>
+                </div>
+              </div>
+              <div class="card">
+                <div class="card-badge-row">
+                  <span class="badge-mini">97.4% R2 Accuracy</span>
+                  <span class="badge-mini">₹ Indian Real Estate</span>
+                </div>
+                <h3>House Price Predictor</h3>
+                <p>
+                  An end-to-end Machine Learning web application predicting Indian housing prices in ₹ Lakhs &amp; Crores with loan EMI calculation and property feature analysis.
+                </p>
+                <div class="card-tags">
+                  <span>Python</span>
+                  <span>Scikit-Learn</span>
+                  <span>Flask</span>
+                </div>
+                <div class="card-actions">
+                  <button class="btn-project btn-modal-trigger" data-project="house">
+                    <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2">
+                      <circle cx="12" cy="12" r="10"></circle>
+                      <line x1="12" y1="16" x2="12" y2="12"></line>
+                      <line x1="12" y1="8" x2="12.01" y2="8"></line>
+                    </svg>
+                    <span>Details</span>
+                  </button>
+                  <a href="https://github.com/vaidya21/House-Price-Prediction" target="_blank" rel="noopener noreferrer" class="btn-project btn-github">
+                    <svg viewBox="0 0 24 24" width="14" height="14" fill="currentColor">
+                      <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
+                    </svg>
+                    <span>GitHub</span>
+                  </a>
+                </div>
+              </div>
+            </article>
           </div>
+        </section>
+
+        <!-- CONTACT SECTION -->
+        <section id="contact" class="content-section">
+          <h2 class="heading">Contact Me</h2>
+          <div class="line"></div>
+          <p class="content">
+            I am actively seeking Machine Learning and Software Engineering opportunities (internships, junior roles, collaborative projects). Have a question or proposal? Drop a message below!
+          </p>
+
+          <div class="contact-form-container">
+            <form id="contactForm" class="contact-form" novalidate>
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="userName">Your Name *</label>
+                  <input type="text" id="userName" name="name" placeholder="John Doe" required />
+                  <span class="error-msg" id="nameError">Please provide your name</span>
+                </div>
+                <div class="form-group">
+                  <label for="userEmail">Your Email *</label>
+                  <input type="email" id="userEmail" name="email" placeholder="john@example.com" required />
+                  <span class="error-msg" id="emailError">Please provide a valid email</span>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="userSubject">Subject *</label>
+                <input type="text" id="userSubject" name="subject" placeholder="Opportunity / Project Collaboration" required />
+                <span class="error-msg" id="subjectError">Please provide a subject line</span>
+              </div>
+
+              <div class="form-group">
+                <label for="userMessage">Message *</label>
+                <textarea id="userMessage" name="message" rows="5" placeholder="Hi Vaidyanath, I would like to discuss..." required></textarea>
+                <span class="error-msg" id="messageError">Please enter your message</span>
+              </div>
+
+              <button type="submit" class="btn-submit" id="submitBtn">
+                <span>Send Message</span>
+                <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2">
+                  <line x1="22" y1="2" x2="11" y2="13"></line>
+                  <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+                </svg>
+              </button>
+            </form>
+          </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="footer">
+          <p>&copy; 2026 Vaidyanath Soni &bull; Aspiring ML Engineer</p>
+        </footer>
+      </main>
+    </div>
+
+    <!-- PROJECT DETAILS MODAL DIALOG -->
+    <div class="modal-backdrop" id="projectModal" role="dialog" aria-modal="true" aria-hidden="true">
+      <div class="modal-dialog">
+        <button class="modal-close" id="modalCloseBtn" aria-label="Close dialog">&times;</button>
+        <div class="modal-body" id="modalBody">
+          <!-- Injected dynamically via script.js -->
         </div>
       </div>
     </div>
+
+    <!-- TOAST NOTIFICATION -->
+    <div class="toast" id="toastNotification" role="status" aria-live="polite">
+      <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2">
+        <polyline points="20 6 9 17 4 12"></polyline>
+      </svg>
+      <span id="toastText">Action completed</span>
+    </div>
+
+    <!-- BACK TO TOP BUTTON -->
+    <button class="back-to-top" id="backToTop" aria-label="Back to top" title="Back to top">
+      <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
+        <polyline points="18 15 12 9 6 15"></polyline>
+      </svg>
+    </button>
+
+    <script src="script.js"></script>
   </body>
 </html>
