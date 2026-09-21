@@ -2,7 +2,7 @@
 
 A modern, responsive personal portfolio website built to showcase my technical skills, machine learning projects, and academic background. 
 
-🌐 **[View Live Portfolio Here](vaidya-portfolio-21bb21.netlify.app)**
+🌐 **[View Live Portfolio Here](https://vaidya-portfolio-21bb21.netlify.app/)**
 
 ## 💡 Overview
 This repository contains the source code for my personal portfolio. It is designed with a clean, minimalist aesthetic and is fully responsive across all devices. It serves as a central hub for my resume, contact information, and detailed project case studies.
